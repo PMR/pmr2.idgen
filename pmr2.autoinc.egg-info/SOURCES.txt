@@ -8,6 +8,13 @@ pmr2.autoinc.egg-info/dependency_links.txt
 pmr2.autoinc.egg-info/entry_points.txt
 pmr2.autoinc.egg-info/namespace_packages.txt
 pmr2.autoinc.egg-info/not-zip-safe
+pmr2.autoinc.egg-info/paster_plugins.txt
 pmr2.autoinc.egg-info/requires.txt
 pmr2.autoinc.egg-info/top_level.txt
 pmr2/autoinc/__init__.py
+pmr2/autoinc/counter.py
+pmr2/autoinc/interfaces.py
+pmr2/autoinc/setuphandlers.py
+pmr2/autoinc/tests/__init__.py
+pmr2/autoinc/tests/base.py
+pmr2/autoinc/tests/test_setup.py

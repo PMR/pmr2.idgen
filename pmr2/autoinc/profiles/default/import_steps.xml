@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="pmr2_autoinc" version="0.0"
+               handler="pmr2.autoinc.setuphandlers.importVarious"
+               title="PMR2 Auto-increment Counter">
+  </import-step>
+</import-steps>

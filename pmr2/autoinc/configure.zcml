@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="pmr2.app">
+
+  <include package="zope.annotation" />
+
+  <five:registerPackage package="." />
+
+  <genericsetup:registerProfile
+      name="pmr2.autoinc"
+      title="PMR2 Auto-increment counter"
+      directory="profiles/default"
+      description="A simple auto-increment counter"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <adapter factory=".counter.Counter" />
+
+</configure>

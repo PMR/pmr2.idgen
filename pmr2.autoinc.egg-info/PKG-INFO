@@ -5,7 +5,7 @@ Summary: Auto increment id provider
 Home-page: UNKNOWN
 Author: Tommy Yu
 Author-email: tommy.yu@auckland.ac.nz
-License: GPL
+License: MPL, GPL, LGPL
 Description: Introduction
         ============
         
@@ -23,3 +23,6 @@ Description: Introduction
 Platform: UNKNOWN
 Classifier: Programming Language :: Python
 Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: License :: OSI Approved :: Mozilla Public License 1.1 (MPL 1.1)
