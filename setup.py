@@ -4,7 +4,7 @@ import os
 version = 'trunk'
 
 setup(
-    name='pmr2.autoinc',
+    name='pmr2.counter',
     version=version,
     description='Auto increment id provider',
     long_description=open('README.txt').read() + '\n' +

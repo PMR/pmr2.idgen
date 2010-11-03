@@ -10,13 +10,13 @@
   <five:registerPackage package="." />
 
   <genericsetup:registerProfile
-      name="pmr2.autoinc"
-      title="PMR2 Auto-increment counter"
+      name="pmr2.counter"
+      title="PMR2 Auto-increment autoinc"
       directory="profiles/default"
-      description="A simple auto-increment counter"
+      description="A simple auto-increment autoinc"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
-  <adapter factory=".counter.Counter" />
+  <adapter factory=".autoinc.Autoinc" />
 
 </configure>

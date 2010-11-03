@@ -1,7 +1,7 @@
 from StringIO import StringIO
 
-from pmr2.autoinc.interfaces import ICounter
-from pmr2.autoinc.counter import Counter
+from pmr2.counter.interfaces import ICounter
+from pmr2.counter.interfaces import IAutoinc
 
 
 def add_default_counter(site):
@@ -13,7 +13,7 @@ def add_default_counter(site):
     sm = site.getSiteManager()
     if not sm.queryUtility(ICounter):
         print >> out, 'PMR2 default auto-increment counter registered'
-        sm.registerUtility(ICounter(site), ICounter)
+        sm.registerUtility(IAutoinc(site), ICounter, 'autoinc')
     return out.getvalue()
 
 def remove_default_counter(site):
@@ -26,7 +26,7 @@ def remove_default_counter(site):
     u = sm.queryUtility(ICounter)
     if u:
         print >> out, 'PMR2 default auto-increment counter unregistered'
-        sm.unregisterUtility(u, ICounter)
+        sm.unregisterUtility(u, ICounter, 'autoinc')
     return out.getvalue()
 
 def importVarious(context):
