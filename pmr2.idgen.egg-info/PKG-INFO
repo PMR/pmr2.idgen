@@ -1,7 +1,7 @@
 Metadata-Version: 1.0
-Name: pmr2.counter
+Name: pmr2.idgen
 Version: trunkdev
-Summary: Auto increment id provider
+Summary: PMR2 ID Generator
 Home-page: UNKNOWN
 Author: Tommy Yu
 Author-email: tommy.yu@auckland.ac.nz

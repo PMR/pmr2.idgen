@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="pmr2_idgen" version="0.0"
+               handler="pmr2.idgen.setuphandlers.importVarious"
+               title="PMR2 Id Generator">
+  </import-step>
+</import-steps>

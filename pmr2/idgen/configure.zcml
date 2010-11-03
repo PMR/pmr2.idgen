@@ -10,10 +10,10 @@
   <five:registerPackage package="." />
 
   <genericsetup:registerProfile
-      name="pmr2.counter"
-      title="PMR2 Auto-increment autoinc"
+      name="pmr2.idgen"
+      title="PMR2 ID Generator"
       directory="profiles/default"
-      description="A simple auto-increment autoinc"
+      description="Provides utilities that generates unique ids."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 

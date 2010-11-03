@@ -6,13 +6,13 @@ from persistent import Persistent
 from zope.annotation import factory, IAttributeAnnotatable
 from zope.app.container.contained import Contained
 
-from pmr2.counter.interfaces import ICounter
-from pmr2.counter.interfaces import IAutoinc
+from pmr2.idgen.interfaces import IIdGenerator
+from pmr2.idgen.interfaces import IAutoinc
 
-from pmr2.counter.counter import BaseCounter
+from pmr2.idgen.base import BaseIdGenerator
 
 
-class AutoincAnnotation(Persistent, Contained, BaseCounter):
+class AutoincAnnotation(Persistent, Contained, BaseIdGenerator):
     """
     A naive implementation of an autoincrement counter.
     """

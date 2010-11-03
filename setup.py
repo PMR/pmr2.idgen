@@ -4,9 +4,9 @@ import os
 version = 'trunk'
 
 setup(
-    name='pmr2.counter',
+    name='pmr2.idgen',
     version=version,
-    description='Auto increment id provider',
+    description='PMR2 ID Generator',
     long_description=open('README.txt').read() + '\n' +
                      open(os.path.join('docs', 'HISTORY.txt')).read(),
     # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers

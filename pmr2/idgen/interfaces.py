@@ -2,9 +2,9 @@ import zope.interface
 import zope.schema
 
 
-class ICounter(zope.interface.Interface):
+class IIdGenerator(zope.interface.Interface):
     """\
-    Generic PMR2 counter.
+    Generic PMR2 ID Generator.
     """
 
     def next():
