@@ -14,7 +14,7 @@ from Products.PloneTestCase.layer import onsetup, onteardown
 
 @onsetup
 def setup():
-    import pmr2.app
+    import pmr2.idgen
     fiveconfigure.debug_mode = True
     zcml.load_config('configure.zcml', pmr2.idgen)
     fiveconfigure.debug_mode = False
