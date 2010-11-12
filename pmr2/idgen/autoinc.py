@@ -39,6 +39,7 @@ class AutoincHexAnnotation(AutoincAnnotation):
     value = zope.schema.fieldproperty.FieldProperty(IAutoincHex['value'])
 
     def next(self):
-        return '%x' % super(AutoincHexAnnotation, self).next()
+        super(AutoincHexAnnotation, self).next()
+        return '%x' % self.value
 
 AutoincHex = factory(AutoincHexAnnotation)
