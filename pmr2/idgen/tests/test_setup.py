@@ -1,6 +1,7 @@
 from unittest import TestSuite, makeSuite
 
 import zope.component
+from zope.schema.interfaces import IVocabularyFactory
 
 from pmr2.idgen.interfaces import *
 from pmr2.idgen.tests.base import TestCase
@@ -52,10 +53,19 @@ class TestRandom128Hex(TestCase):
         self.assertEqual(len(i), 32)
 
 
+class TestVocab(TestCase):
+
+    def test_001_basic(self):
+        f = zope.component.getUtility(IVocabularyFactory, 'pmr2.idgen.vocab')
+        vocab = f(None)
+        self.assertEqual(len(list(vocab)), 3)
+
+
 def test_suite():
     suite = TestSuite()
     suite.addTest(makeSuite(TestProductInstall))
     suite.addTest(makeSuite(TestAutoinc))
     suite.addTest(makeSuite(TestAutoincHex))
     suite.addTest(makeSuite(TestRandom128Hex))
+    suite.addTest(makeSuite(TestVocab))
     return suite

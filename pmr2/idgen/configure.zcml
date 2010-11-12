@@ -7,6 +7,7 @@
 
   <include package="zope.annotation" />
   <include file="rand.zcml" />
+  <include file="vocab.zcml" />
 
   <five:registerPackage package="." />
 
