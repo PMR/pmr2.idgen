@@ -1,0 +1,11 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="pmr2.idgen">
+
+  <utility 
+      name="rand128hex"
+      factory=".rand.Hex128bit" 
+      provides=".interfaces.IIdGenerator"
+      />
+
+</configure>

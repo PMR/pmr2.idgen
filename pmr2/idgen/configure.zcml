@@ -6,6 +6,7 @@
     i18n_domain="pmr2.idgen">
 
   <include package="zope.annotation" />
+  <include file="rand.zcml" />
 
   <five:registerPackage package="." />
 

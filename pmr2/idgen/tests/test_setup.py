@@ -44,9 +44,18 @@ class TestAutoincHex(TestCase):
         self.assertEqual(count, 'b')
 
 
+class TestRandom128Hex(TestCase):
+
+    def test_001_basic(self):
+        u = zope.component.getUtility(IIdGenerator, 'rand128hex')
+        i = u.next()
+        self.assertEqual(len(i), 32)
+
+
 def test_suite():
     suite = TestSuite()
     suite.addTest(makeSuite(TestProductInstall))
     suite.addTest(makeSuite(TestAutoinc))
     suite.addTest(makeSuite(TestAutoincHex))
+    suite.addTest(makeSuite(TestRandom128Hex))
     return suite
