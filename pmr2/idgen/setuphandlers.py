@@ -2,6 +2,12 @@ from StringIO import StringIO
 
 from pmr2.idgen.interfaces import IIdGenerator
 from pmr2.idgen.interfaces import IAutoinc
+from pmr2.idgen.interfaces import IAutoincHex
+
+_counters = (
+    (IAutoinc, 'autoinc'),
+    (IAutoincHex, 'autohex'),
+)
 
 
 def add_default_counter(site):
@@ -11,9 +17,12 @@ def add_default_counter(site):
 
     out = StringIO()
     sm = site.getSiteManager()
-    if not sm.queryUtility(IIdGenerator):
-        print >> out, 'PMR2 default auto-increment counter registered'
-        sm.registerUtility(IAutoinc(site), IIdGenerator, 'autoinc')
+
+    for iface, key in _counters:
+        if not sm.queryUtility(IIdGenerator, key):
+            print >> out, 'annotation for `%s` registered' % key
+            sm.registerUtility(iface(site), IIdGenerator, key)
+
     return out.getvalue()
 
 def remove_default_counter(site):
@@ -23,10 +32,13 @@ def remove_default_counter(site):
 
     out = StringIO()
     sm = site.getSiteManager()
-    u = sm.queryUtility(IIdGenerator)
-    if u:
-        print >> out, 'PMR2 default auto-increment counter unregistered'
-        sm.unregisterUtility(u, IIdGenerator, 'autoinc')
+
+    for iface, key in _counters:
+        u = sm.queryUtility(IIdGenerator, key)
+        if u:
+            print >> out, 'annotation for `%s` unregistered' % key
+            sm.unregisterUtility(u, IIdGenerator, key)
+
     return out.getvalue()
 
 def importVarious(context):

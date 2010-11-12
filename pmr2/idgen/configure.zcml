@@ -18,5 +18,6 @@
       />
 
   <adapter factory=".autoinc.Autoinc" />
+  <adapter factory=".autoinc.AutoincHex" />
 
 </configure>

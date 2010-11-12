@@ -23,3 +23,9 @@ class IAutoinc(zope.interface.Interface):
         description=u'The current value of this counter.',
         default=0,
     )
+
+
+class IAutoincHex(IAutoinc):
+    """\
+    Storage of the last
+    """

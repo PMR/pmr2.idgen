@@ -7,7 +7,7 @@ from zope.annotation import factory, IAttributeAnnotatable
 from zope.app.container.contained import Contained
 
 from pmr2.idgen.interfaces import IIdGenerator
-from pmr2.idgen.interfaces import IAutoinc
+from pmr2.idgen.interfaces import IAutoinc, IAutoincHex
 
 from pmr2.idgen.base import BaseIdGenerator
 
@@ -24,6 +24,21 @@ class AutoincAnnotation(Persistent, Contained, BaseIdGenerator):
 
     def next(self):
         self.value = self.value + 1
-        return self.value
+        return str(self.value)
 
 Autoinc = factory(AutoincAnnotation)
+
+
+class AutoincHexAnnotation(AutoincAnnotation):
+    """
+    Same as Autoinc, but returns hex instead of int.
+    """
+
+    zope.interface.implements(IAutoincHex)
+
+    value = zope.schema.fieldproperty.FieldProperty(IAutoincHex['value'])
+
+    def next(self):
+        return '%x' % super(AutoincHexAnnotation, self).next()
+
+AutoincHex = factory(AutoincHexAnnotation)
