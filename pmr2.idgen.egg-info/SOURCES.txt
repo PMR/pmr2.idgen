@@ -14,7 +14,9 @@ pmr2/idgen/__init__.py
 pmr2/idgen/autoinc.py
 pmr2/idgen/base.py
 pmr2/idgen/interfaces.py
+pmr2/idgen/rand.py
 pmr2/idgen/setuphandlers.py
+pmr2/idgen/vocab.py
 pmr2/idgen/tests/__init__.py
 pmr2/idgen/tests/base.py
 pmr2/idgen/tests/test_setup.py
