@@ -1,6 +1,8 @@
+MANIFEST.in
 README.txt
 setup.cfg
 setup.py
+docs/HISTORY.txt
 pmr2/__init__.py
 pmr2.idgen.egg-info/PKG-INFO
 pmr2.idgen.egg-info/SOURCES.txt
@@ -13,10 +15,14 @@ pmr2.idgen.egg-info/top_level.txt
 pmr2/idgen/__init__.py
 pmr2/idgen/autoinc.py
 pmr2/idgen/base.py
+pmr2/idgen/configure.zcml
 pmr2/idgen/interfaces.py
 pmr2/idgen/rand.py
+pmr2/idgen/rand.zcml
 pmr2/idgen/setuphandlers.py
 pmr2/idgen/vocab.py
+pmr2/idgen/vocab.zcml
+pmr2/idgen/profiles/default/import_steps.xml
 pmr2/idgen/tests/__init__.py
 pmr2/idgen/tests/base.py
 pmr2/idgen/tests/test_setup.py
