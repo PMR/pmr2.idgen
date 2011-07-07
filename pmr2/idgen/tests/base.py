@@ -6,7 +6,7 @@ from zope.app.component.hooks import getSite
 
 from pmr2.idgen.interfaces import *
 
-from Products.Five import zcml
+from Zope2.App import zcml
 from Products.Five import fiveconfigure
 from Products.PloneTestCase import PloneTestCase as ptc
 from Products.PloneTestCase.layer import onsetup, onteardown
