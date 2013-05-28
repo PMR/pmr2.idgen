@@ -2,7 +2,6 @@ from unittest import TestSuite, makeSuite
 from Testing import ZopeTestCase as ztc
 
 import zope.component
-from zope.app.component.hooks import getSite
 
 from pmr2.idgen.interfaces import *
 
