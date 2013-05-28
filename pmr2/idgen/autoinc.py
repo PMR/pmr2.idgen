@@ -4,7 +4,7 @@ import zope.schema
 
 from persistent import Persistent
 from zope.annotation import factory, IAttributeAnnotatable
-from zope.app.container.contained import Contained
+from zope.container.contained import Contained
 
 from pmr2.idgen.interfaces import IIdGenerator
 from pmr2.idgen.interfaces import IAutoinc, IAutoincHex
