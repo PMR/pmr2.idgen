@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.1.1 - Released (2013-07-08)
+-----------------------------
+
+* Removed imports from deprecated zope.app namespaces.
+
 0.1 - Released (2011-08-17)
 ---------------------------
 
